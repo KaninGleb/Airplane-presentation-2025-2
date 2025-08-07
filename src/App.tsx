@@ -79,7 +79,7 @@ const pointsData: PointData[] = [
     image: Nameplates,
     alt: 'Technical nameplates',
     description: [
-      { label: descriptionLabels.size, value: 'н/а' },
+      { label: descriptionLabels.size, value: 'N/A' },
       { label: descriptionLabels.expedition, value: '"Kamchatka" Expedition, 2021–2023' },
     ],
   },
