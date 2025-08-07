@@ -15,7 +15,7 @@ import {
   quoteIcon,
   citrusOrchardExrUrl,
   RadioReceiver,
-  propeller,
+  Nameplates,
   tail,
 } from './assets'
 import { BurgerButton } from './components/BurgerIcon/BurgerIcon.tsx'
@@ -69,18 +69,18 @@ const pointsData: PointData[] = [
     alt: 'fuselageImage',
     description: [
       { label: descriptionLabels.size, value: '24 x 10 x 5' },
-      { label: descriptionLabels.expedition, value: 'EXPEDITION: "Kamchatka" Expedition, 2021–2023' },
+      { label: descriptionLabels.expedition, value: '"Kamchatka" Expedition, 2021–2023' },
     ],
   },
   {
     id: 2,
-    title: 'Propeller with aircraft blades (C‐47 Douglas aircraft of 2nd Lieutenant Spiridonov E.S.)',
+    title: 'Technical nameplates from two different PV-1 Ventura aircrafts (of Lieutenant Jack R. Cowles and Lieutenant John W Powers)',
     position: [-3.33, 2.88, -8.8],
-    image: propeller,
+    image: Nameplates,
     alt: 'propellerImage',
     description: [
-      { label: descriptionLabels.size, value: '130 x 30 x 30' },
-      { label: descriptionLabels.expedition, value: 'ALSIB Expedition, September 2022' },
+      { label: descriptionLabels.size, value: 'н/а' },
+      { label: descriptionLabels.expedition, value: '"Kamchatka" Expedition, 2021–2023' },
     ],
   },
   {

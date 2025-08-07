@@ -8,5 +8,5 @@ export { default as newBlackPlaneUrl } from './blue_plane.glb?url'
 export { default as citrusOrchardExrUrl } from './bgs/citrus_orchard_puresky_2k.exr?url'
 
 export { default as RadioReceiver } from './images/1-Radio-receiver.jpg'
-export { default as propeller } from './images/2-Propeller.jpg'
+export { default as Nameplates } from './images/2-Nameplates.jpg'
 export { default as tail } from './images/3-Tail.jpg'
