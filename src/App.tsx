@@ -64,7 +64,7 @@ const pointsData: PointData[] = [
   {
     id: 1,
     title: 'Radio receiver (PV-1 Ventura aircraft of Lieutenant Jack R. Cowles) ',
-    position: [-1.25, 4.7, -9],
+    position: [0, 3.25, -4.4],
     image: RadioReceiver,
     alt: 'Radio receiver',
     description: [
@@ -75,7 +75,7 @@ const pointsData: PointData[] = [
   {
     id: 2,
     title: 'Technical nameplates from two different PV-1 Ventura aircrafts (of Lieutenant Jack R. Cowles and Lieutenant John W Powers)',
-    position: [-3.33, 2.88, -8.8],
+    position: [0, 3.9, 1.7],
     image: Nameplates,
     alt: 'Technical nameplates',
     description: [
@@ -86,7 +86,7 @@ const pointsData: PointData[] = [
   {
     id: 3,
     title: 'Technical cylinder (PV-1 Ventura aircraft of Lieutenant Jack R. Cowles)',
-    position: [0, 6.1, 8.5],
+    position: [0.9, 2.6, 0.3],
     image: Cylinder,
     alt: 'Technical cylinder',
     description: [
