@@ -154,27 +154,18 @@ function Airplane({
   const { setIsLoading } = useLoading()
 
   const [blades, setBlades] = useState<THREE.Object3D[]>([])
-  const [spinners, setSpinners] = useState<THREE.Object3D[]>([])
 
   useEffect(() => {
-    const bladeNames = ['AirFrance_obj_26_aiAirFrance_udim2_0002', 'AirFrance_obj_22_aiAirFrance_udim2_0002']
-    const spinnerNames = ['Cylinder002', 'Cylinder005']
+    const bladeNames = ['Prop_Blade', 'Prop_']
 
     const foundBlades: THREE.Object3D[] = []
-    const foundSpinners: THREE.Object3D[] = []
 
     bladeNames.forEach((name) => {
       const part = scene.getObjectByName(name)
       if (part) foundBlades.push(part)
     })
 
-    spinnerNames.forEach((name) => {
-      const part = scene.getObjectByName(name)
-      if (part) foundSpinners.push(part)
-    })
-
     setBlades(foundBlades)
-    setSpinners(foundSpinners)
   }, [scene])
 
   useEffect(() => {
@@ -189,13 +180,7 @@ function Airplane({
     if (isPropellerSpinning) {
       if (blades.length > 0) {
         blades.forEach((blade) => {
-          blade.rotation.x += delta * propellerSpeed
-        })
-      }
-
-      if (spinners.length > 0) {
-        spinners.forEach((spinner) => {
-          spinner.rotation.y -= delta * propellerSpeed
+          blade.rotation.z += delta * propellerSpeed
         })
       }
     }
@@ -235,7 +220,9 @@ function InfoBox({ point, onClose }: InfoBoxProps) {
         </div>
 
         <div className={s.infoBoxContent}>
-          {!isImageLoaded && <div className={s.imagePlaceholder}>{<LoadingAnimation title={'Загрузка'} color={'#000'}/>}</div>}
+          {!isImageLoaded && (
+            <div className={s.imagePlaceholder}>{<LoadingAnimation title={'Загрузка'} color={'#000'} />}</div>
+          )}
 
           <img
             src={point.image}
@@ -539,7 +526,7 @@ function LoadingAnimation({ title, color = '#fff' }: { title: string; color?: st
   }, [])
 
   return (
-    <div className={s.loader} style={{color}}>
+    <div className={s.loader} style={{ color }}>
       {title}
       {'.'.repeat(dots)}
     </div>
