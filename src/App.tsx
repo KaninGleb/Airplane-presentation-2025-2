@@ -63,7 +63,7 @@ const descriptionLabels = {
 const pointsData: PointData[] = [
   {
     id: 1,
-    title: 'Radio receiver (PV-1 Ventura aircraft of Lieutenant Jack R. Cowles) ',
+    title: 'Radio receiver (PV-1 Ventura aircraft of Lieutenant Jack R. Cowles)',
     position: [0, 3.25, -4.4],
     image: RadioReceiver,
     alt: 'Radio receiver',
