@@ -253,8 +253,8 @@ export default function App() {
 
   const [isAutoRotating, setIsAutoRotating] = useLocalStorage('isAutoRotating', true)
   const [ambientIntensity, setAmbientIntensity] = useLocalStorage('ambientIntensity', 0)
-  const [directionalIntensity, setDirectionalIntensity] = useLocalStorage('directionalIntensity', 0.7)
-  const [lightAngle, setLightAngle] = useLocalStorage('lightAngle', 45)
+  const [directionalIntensity, setDirectionalIntensity] = useLocalStorage('directionalIntensity', 2)
+  const [lightAngle, setLightAngle] = useLocalStorage('lightAngle', 70)
   const [activePoint, setActivePoint] = useState<PointData | null>(null)
   const [showPoints, setShowPoints] = useLocalStorage('showPoints', true)
   const [pointSize, setPointSize] = useLocalStorage('pointSize', 0.6)
@@ -275,8 +275,8 @@ export default function App() {
   const resetSettings = () => {
     setIsAutoRotating(true)
     setAmbientIntensity(0)
-    setDirectionalIntensity(0.7)
-    setLightAngle(45)
+    setDirectionalIntensity(2)
+    setLightAngle(70)
     setShowPoints(true)
     setPointSize(0.6)
     setRotationSpeed(0.3)
