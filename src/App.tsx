@@ -16,7 +16,7 @@ import {
   citrusOrchardExrUrl,
   RadioReceiver,
   Nameplates,
-  tail,
+  Cylinder,
 } from './assets'
 import { BurgerButton } from './components/BurgerIcon/BurgerIcon.tsx'
 
@@ -66,7 +66,7 @@ const pointsData: PointData[] = [
     title: 'Radio receiver (PV-1 Ventura aircraft of Lieutenant Jack R. Cowles) ',
     position: [-1.25, 4.7, -9],
     image: RadioReceiver,
-    alt: 'fuselageImage',
+    alt: 'Radio receiver',
     description: [
       { label: descriptionLabels.size, value: '24 x 10 x 5' },
       { label: descriptionLabels.expedition, value: '"Kamchatka" Expedition, 2021–2023' },
@@ -77,7 +77,7 @@ const pointsData: PointData[] = [
     title: 'Technical nameplates from two different PV-1 Ventura aircrafts (of Lieutenant Jack R. Cowles and Lieutenant John W Powers)',
     position: [-3.33, 2.88, -8.8],
     image: Nameplates,
-    alt: 'propellerImage',
+    alt: 'Technical nameplates',
     description: [
       { label: descriptionLabels.size, value: 'н/а' },
       { label: descriptionLabels.expedition, value: '"Kamchatka" Expedition, 2021–2023' },
@@ -85,13 +85,13 @@ const pointsData: PointData[] = [
   },
   {
     id: 3,
-    title: 'A fragment of the tail fin (C‐47 Douglas aircraft of Major Ponomarenko F.L.)',
+    title: 'Technical cylinder (PV-1 Ventura aircraft of Lieutenant Jack R. Cowles)',
     position: [0, 6.1, 8.5],
-    image: tail,
-    alt: 'tailImage',
+    image: Cylinder,
+    alt: 'Technical cylinder',
     description: [
-      { label: descriptionLabels.size, value: '140 x 120 x 30' },
-      { label: descriptionLabels.expedition, value: 'ALSIB Expedition, July 2022' },
+      { label: descriptionLabels.size, value: '45 х 15' },
+      { label: descriptionLabels.expedition, value: 'ALSIB Expedition, September 2022' },
     ],
   },
 ]
