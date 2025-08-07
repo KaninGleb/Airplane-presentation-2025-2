@@ -14,7 +14,7 @@ import {
   HClogo,
   quoteIcon,
   citrusOrchardExrUrl,
-  fuselage,
+  RadioReceiver,
   propeller,
   tail,
 } from './assets'
@@ -63,13 +63,13 @@ const descriptionLabels = {
 const pointsData: PointData[] = [
   {
     id: 1,
-    title: 'A fragment of the fuselage (C‐47 Douglas aircraft  of leut. Gerasimov E.F.)',
+    title: 'Radio receiver (PV-1 Ventura aircraft of Lieutenant Jack R. Cowles) ',
     position: [-1.25, 4.7, -9],
-    image: fuselage,
+    image: RadioReceiver,
     alt: 'fuselageImage',
     description: [
-      { label: descriptionLabels.size, value: '200 x 100 x 30' },
-      { label: descriptionLabels.expedition, value: 'ALSIB Expedition, September 2022' },
+      { label: descriptionLabels.size, value: '24 x 10 x 5' },
+      { label: descriptionLabels.expedition, value: 'EXPEDITION: "Kamchatka" Expedition, 2021–2023' },
     ],
   },
   {
