@@ -326,24 +326,50 @@ export default function App() {
     }
   }, [isPanelOpen])
 
+  const [isOpen, setIsOpen] = useState(false)
+  const contentRef = useRef<HTMLUListElement>(null)
+  const [height, setHeight] = useState('0px')
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setHeight(isOpen ? `${contentRef.current.scrollHeight}px` : '0px')
+    }
+  }, [isOpen])
+
   return (
     <div className={s.container}>
       {!isLoading && (
         <>
           <header className={s.header}>
             <div className={s.logosWrapper}>
-              <img src={RGSlogo} alt={'Logo'} className={s.logotype} draggable={false} />
-              <img src={HClogo} alt={'Logo'} className={s.logotype} draggable={false} />
+              <img src={RGSlogo} alt='Logo' className={s.logotype} draggable={false} />
+              <img src={HClogo} alt='Logo' className={s.logotype} draggable={false} />
             </div>
             <h1 className={s.name}>Lockheed PV-1 Ventura Bu.No. 49507</h1>
 
-            <aside className={s.card} aria-label={'Aircraft crew and details'}>
-              <img src={quoteIcon} alt={'Quote Icon'} className={s.quoteIcon} draggable={false} />
+            <aside
+              className={s.card}
+              aria-label='Aircraft crew and details'
+              onClick={() => setIsOpen(!isOpen)}
+              style={{ cursor: 'pointer', userSelect: 'none' }}
+            >
+              <img src={quoteIcon} alt='Quote Icon' className={s.quoteIcon} draggable={false} />
+
               <div>
                 <h2 className={s.title}>Lockheed PV-1 Ventura Bu.No. 49507</h2>
-
-                <ul className={s.description}>
-                  <li>Pilot Lt. Jack R. Cowles;</li>
+                <ul
+                  className={s.description}
+                style={{marginTop: '10px'}}
+                >
+                <li>Pilot Lt. Jack R. Cowles;</li>
+                </ul>
+                <ul
+                  className={s.description}
+                  ref={contentRef}
+                  style={{
+                    height: height,
+                  }}
+                >
                   <li>Ens Leonard Panella, Jr.,</li>
                   <li>Ens Millard B. Parker,</li>
                   <li>Harold R. Toney, ARM1c,</li>
@@ -351,6 +377,18 @@ export default function App() {
                   <li style={{ marginTop: '16px' }}>Bombing Squadron 136 (VB-136)</li>
                   <li>Crash Landed August 19, 1944</li>
                 </ul>
+
+                <div className={`${s.arrow} ${isOpen ? s.open : ''}`}>
+                  <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                      d='M6 9L12 15L18 9'
+                      stroke='currentColor'
+                      strokeWidth='2'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                    />
+                  </svg>
+                </div>
               </div>
             </aside>
           </header>
