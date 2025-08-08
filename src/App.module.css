@@ -43,7 +43,8 @@
     content: '';
     position: fixed;
     top: 0;
-    left: 100px;
+    /*left: 100px;*/
+    left: calc(5.5vh + 20px);
     width: 1.5px;
     height: 100vh;
     background-color: #000;
@@ -51,21 +52,15 @@
     transition: left 0.3s ease-in-out;
 }
 
-@media (max-height: 1060px) {
+@media (max-height: 1110px) {
     .header::before {
-        left: 86px;
+        left: calc(7vh + 20px);
     }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 740px) {
     .header::before {
-        left: 80px;
-    }
-}
-
-@media (max-height: 570px) {
-    .header::before {
-        left: 52px;
+        left: 56px;
     }
 }
 
@@ -108,31 +103,34 @@
     text-transform: uppercase;
     color: #000;
     transition: font-size 0.2s ease-in-out;
+    white-space: nowrap;
 }
 
-@media (max-height: 1059px) {
+@media (max-height: 1320px) {
     .name {
-        font-size: calc(16px + 1.5vh);
+        font-size: calc(16px + 1.7vh);
+        bottom: 20px;
+    }
+}
+
+@media (max-height: 920px) {
+    .name {
+        font-size: calc(12px + 1.7vh);
+        bottom: 10px;
+    }
+}
+
+@media (max-height: 740px) {
+    .name {
+        bottom: 0;
+        left: 20px;
+        font-size: 18px;
     }
 }
 
 @media (max-height: 570px) {
     .name {
         font-size: calc(10px + 1vh);
-    }
-}
-
-@media (max-height: 700px) {
-    .name {
-        bottom: 0;
-    }
-}
-
-
-@media (max-height: 700px) {
-    .name {
-        left: 20px;
-
     }
 }
 
