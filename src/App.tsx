@@ -331,8 +331,12 @@ export default function App() {
   const [height, setHeight] = useState('0px')
 
   useEffect(() => {
-    if (contentRef.current) {
-      setHeight(isOpen ? `${contentRef.current.scrollHeight}px` : '0px')
+    if (!contentRef.current) return
+
+    if (isOpen) {
+      setHeight(`${contentRef.current.scrollHeight - 30}px`)
+    } else {
+      setHeight('0px')
     }
   }, [isOpen])
 
@@ -357,25 +361,19 @@ export default function App() {
 
               <div>
                 <h2 className={s.title}>Lockheed PV-1 Ventura Bu.No. 49507</h2>
-                <ul
-                  className={s.description}
-                style={{marginTop: '10px'}}
-                >
-                <li>Pilot Lt. Jack R. Cowles;</li>
-                </ul>
-                <ul
-                  className={s.description}
-                  ref={contentRef}
-                  style={{
-                    height: height,
-                  }}
-                >
-                  <li>Ens Leonard Panella, Jr.,</li>
-                  <li>Ens Millard B. Parker,</li>
-                  <li>Harold R. Toney, ARM1c,</li>
-                  <li>Gunner John R. McDonald, AOM3c.</li>
-                  <li style={{ marginTop: '16px' }}>Bombing Squadron 136 (VB-136)</li>
-                  <li>Crash Landed August 19, 1944</li>
+
+                <ul className={s.description} ref={contentRef}>
+                  <li>Pilot Lt. Jack R. Cowles;</li>
+                  <li>
+                    <ul style={{ height: height }}>
+                      <li>Ens Leonard Panella, Jr.,</li>
+                      <li>Ens Millard B. Parker,</li>
+                      <li>Harold R. Toney, ARM1c,</li>
+                      <li>Gunner John R. McDonald, AOM3c.</li>
+                      <li style={{ marginTop: '16px' }}>Bombing Squadron 136 (VB-136)</li>
+                      <li>Crash Landed August 19, 1944</li>
+                    </ul>
+                  </li>
                 </ul>
 
                 <div className={`${s.arrow} ${isOpen ? s.open : ''}`}>
