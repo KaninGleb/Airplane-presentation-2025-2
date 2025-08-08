@@ -74,7 +74,8 @@ const pointsData: PointData[] = [
   },
   {
     id: 2,
-    title: 'Technical nameplates from two different PV-1 Ventura aircrafts (of Lieutenant Jack R. Cowles and Lieutenant John W Powers)',
+    title:
+      'Technical nameplates from two different PV-1 Ventura aircrafts (of Lieutenant Jack R. Cowles and Lieutenant John W Powers)',
     position: [0, 3.9, 1.7],
     image: Nameplates,
     alt: 'Technical nameplates',
@@ -335,19 +336,24 @@ export default function App() {
               <img src={RGSlogo} alt={'Logo'} className={s.logotype} draggable={false} />
               <img src={HClogo} alt={'Logo'} className={s.logotype} draggable={false} />
             </div>
-            <span className={s.name}>Douglas C-47 Spiridonow</span>
+            <span className={s.name}>Lockheed PV-1 Ventura Bu.No. 49507</span>
             <div className={s.card}>
               <img src={quoteIcon} alt='Quote Icon' className={s.quoteIcon} draggable={false} />
               <div>
-                <h3 className={s.title}>
-                  Douglas C-47 <br />
-                  Skytrain <br />
-                  АС 42-23440
-                </h3>
-                <span className={s.description}>
-                  2d Lt. Evgeniy Spiridonow <br />
-                  MIA: May 28, 1943
-                </span>
+                <h3 className={s.title}>Lockheed PV-1 Ventura Bu.No. 49507</h3>
+                <div className={s.description}>
+
+                  <div>Pilot Lt. Jack R. Cowles;</div>
+                  <div>Ens Leonard Panella, Jr.,</div>
+                  <div>Ens Millard B. Parker,</div>
+                  <div>Harold R. Toney, ARM1c,</div>
+                  <div>Gunner John R. McDonald, AOM3c.</div>
+
+                  <div style={{ marginTop: '8px' }}></div>
+
+                  <div>Bombing Squadron 136 (VB-136)</div>
+                  <div>Crash Landed August 19, 1944</div>
+                </div>
               </div>
             </div>
           </div>
