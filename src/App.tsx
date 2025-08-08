@@ -74,8 +74,7 @@ const pointsData: PointData[] = [
   },
   {
     id: 2,
-    title:
-      'Technical nameplates from two different PV-1 Ventura aircrafts (of Lieutenant Jack R. Cowles and Lieutenant John W Powers)',
+    title: 'Technical nameplate from the PV-1 Ventura flown by Lieutenant Jack R. Cowles',
     position: [0, 3.9, 1.7],
     image: Nameplates,
     alt: 'Technical nameplates',
@@ -342,7 +341,6 @@ export default function App() {
               <div>
                 <h3 className={s.title}>Lockheed PV-1 Ventura Bu.No. 49507</h3>
                 <div className={s.description}>
-
                   <div>Pilot Lt. Jack R. Cowles;</div>
                   <div>Ens Leonard Panella, Jr.,</div>
                   <div>Ens Millard B. Parker,</div>
