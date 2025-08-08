@@ -202,7 +202,11 @@
     transform: rotate(0deg);
 }
 
-.arrow.open {
+.arrow svg {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrow.open svg {
     transform: rotate(180deg);
 }
 
@@ -215,7 +219,7 @@
     }
 
     .arrow {
-        bottom: -2px;
+        bottom: -4px;
     }
 
     .title {
