@@ -346,8 +346,8 @@ export default function App() {
         <>
           <header className={s.header}>
             <div className={s.logosWrapper}>
-              <img src={RGSlogo} alt='Logo' className={s.logotype} draggable={false} />
-              <img src={HClogo} alt='Logo' className={s.logotype} draggable={false} />
+              <img src={RGSlogo} alt='Logo' className={s.logotypeFirst} draggable={false} />
+              <img src={HClogo} alt='Logo' className={s.logotypeSecond} draggable={false} />
             </div>
             <h1 className={s.name}>Lockheed PV-1 Ventura Bu.No. 49507</h1>
 
