@@ -104,6 +104,7 @@
     color: #000;
     transition: font-size 0.2s ease-in-out;
     white-space: nowrap;
+    user-select: none;
 }
 
 @media (max-height: 1320px) {
@@ -330,6 +331,7 @@
     margin-bottom: 32px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     padding-bottom: 20px;
+    user-select: none;
 }
 
 .label {
