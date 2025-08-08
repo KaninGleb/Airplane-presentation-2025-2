@@ -330,31 +330,30 @@ export default function App() {
     <div className={s.container}>
       {!isLoading && (
         <>
-          <div className={s.header}>
+          <header className={s.header}>
             <div className={s.logosWrapper}>
               <img src={RGSlogo} alt={'Logo'} className={s.logotype} draggable={false} />
               <img src={HClogo} alt={'Logo'} className={s.logotype} draggable={false} />
             </div>
-            <span className={s.name}>Lockheed PV-1 Ventura Bu.No. 49507</span>
-            <div className={s.card}>
-              <img src={quoteIcon} alt='Quote Icon' className={s.quoteIcon} draggable={false} />
+            <h1 className={s.name}>Lockheed PV-1 Ventura Bu.No. 49507</h1>
+
+            <aside className={s.card} aria-label={'Aircraft crew and details'}>
+              <img src={quoteIcon} alt={'Quote Icon'} className={s.quoteIcon} draggable={false} />
               <div>
-                <h3 className={s.title}>Lockheed PV-1 Ventura Bu.No. 49507</h3>
-                <div className={s.description}>
-                  <div>Pilot Lt. Jack R. Cowles;</div>
-                  <div>Ens Leonard Panella, Jr.,</div>
-                  <div>Ens Millard B. Parker,</div>
-                  <div>Harold R. Toney, ARM1c,</div>
-                  <div>Gunner John R. McDonald, AOM3c.</div>
+                <h2 className={s.title}>Lockheed PV-1 Ventura Bu.No. 49507</h2>
 
-                  <div style={{ marginTop: '8px' }}></div>
-
-                  <div>Bombing Squadron 136 (VB-136)</div>
-                  <div>Crash Landed August 19, 1944</div>
-                </div>
+                <ul className={s.description}>
+                  <li>Pilot Lt. Jack R. Cowles;</li>
+                  <li>Ens Leonard Panella, Jr.,</li>
+                  <li>Ens Millard B. Parker,</li>
+                  <li>Harold R. Toney, ARM1c,</li>
+                  <li>Gunner John R. McDonald, AOM3c.</li>
+                  <li style={{ marginTop: '16px' }}>Bombing Squadron 136 (VB-136)</li>
+                  <li>Crash Landed August 19, 1944</li>
+                </ul>
               </div>
-            </div>
-          </div>
+            </aside>
+          </header>
 
           <BurgerButton ref={buttonRef} isOpen={isPanelOpen} onClick={() => setIsPanelOpen(!isPanelOpen)} />
         </>

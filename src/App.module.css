@@ -174,10 +174,11 @@
     font-weight: 400;
     font-size: 16px;
     color: #26282c;
-    line-height: 1.3;
+    line-height: 1.2;
+    list-style: none;
 }
 
-.description > div:first-child {
+.description > li:first-child {
     margin-top: 10px;
 }
 
