@@ -8,5 +8,5 @@ export { default as newBlackPlaneUrl } from './blue_plane.glb?url'
 export { default as citrusOrchardExrUrl } from './bgs/kloofendal_48d_partly_cloudy_puresky_2k.exr?url'
 
 export { default as RadioReceiver } from './images/1-Radio-receiver.jpg'
-export { default as Nameplates } from './images/2-Nameplates.jpg'
-export { default as Cylinder } from './images/3-Cylinder.jpg'
+export { default as Nameplates } from './images/2-Nameplates-new.jpg'
+export { default as Cylinder } from './images/3-Cylinder-new.jpg'

@@ -27,6 +27,7 @@ type PointData = {
   description: { label: string; value: string }[]
   image: string
   alt: string
+  orientation: 'horizontal' | 'vertical'
 }
 
 type AirplaneProps = {
@@ -67,6 +68,7 @@ const pointsData: PointData[] = [
     position: [0, 3.25, -4.4],
     image: RadioReceiver,
     alt: 'Radio receiver',
+    orientation: 'horizontal',
     description: [
       { label: descriptionLabels.size, value: '24 x 10 x 5' },
       { label: descriptionLabels.expedition, value: '"Kamchatka" Expedition, 2021–2023' },
@@ -78,6 +80,7 @@ const pointsData: PointData[] = [
     position: [0, 3.9, 1.7],
     image: Nameplates,
     alt: 'Technical nameplates',
+    orientation: 'vertical',
     description: [
       { label: descriptionLabels.size, value: 'N/A' },
       { label: descriptionLabels.expedition, value: '"Kamchatka" Expedition, 2021–2023' },
@@ -89,6 +92,7 @@ const pointsData: PointData[] = [
     position: [0.9, 2.6, 0.3],
     image: Cylinder,
     alt: 'Technical cylinder',
+    orientation: 'horizontal',
     description: [
       { label: descriptionLabels.size, value: '45 х 15' },
       { label: descriptionLabels.expedition, value: 'ALSIB Expedition, September 2022' },
@@ -206,10 +210,15 @@ function Airplane({
 
 function InfoBox({ point, onClose }: InfoBoxProps) {
   const [isImageLoaded, setIsImageLoaded] = useState(false)
+  // const [isVertical, setIsVertical] = useState<boolean | null>(null)
+
+  const isVertical = point.orientation === 'vertical'
+
+  const infoBoxClassName = `${s.infoBox} ${isVertical ? s.verticalCard : ''}`
 
   return (
     <div className={s.infoBoxBackdrop} onClick={onClose}>
-      <div className={s.infoBox} onClick={(e) => e.stopPropagation()}>
+      <div className={infoBoxClassName} onClick={(e) => e.stopPropagation()}>
         <button className={s.infoBoxCloseButton} onClick={onClose}>
           ×
         </button>
@@ -221,13 +230,17 @@ function InfoBox({ point, onClose }: InfoBoxProps) {
 
         <div className={s.infoBoxContent}>
           {!isImageLoaded && (
-            <div className={s.imagePlaceholder}>{<LoadingAnimation title={'Загрузка'} color={'#000'} />}</div>
+            <div
+              className={`${s.imagePlaceholder} ${isVertical ? s.verticalImagePlaceholder : s.horizontalImagePlaceholder}`}
+            >
+              {<LoadingAnimation title={'Загрузка'} color={'#000'} />}
+            </div>
           )}
 
           <img
             src={point.image}
             alt={point.alt}
-            className={s.cardImage}
+            className={`${s.cardImage} ${isVertical ? s.vertical : s.horizontal}`}
             onLoad={() => setIsImageLoaded(true)}
             style={{ display: isImageLoaded ? 'block' : 'none' }}
           />
