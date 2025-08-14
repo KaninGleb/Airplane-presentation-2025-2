@@ -80,7 +80,7 @@ const pointsData: PointData[] = [
     position: [0, 3.9, 1.7],
     image: Nameplates,
     alt: 'Technical nameplates',
-    orientation: 'vertical',
+    orientation: 'horizontal',
     description: [
       { label: descriptionLabels.size, value: 'N/A' },
       { label: descriptionLabels.expedition, value: '"Kamchatka" Expedition, 2021–2023' },
